@@ -1,4 +1,4 @@
 parameters:
     app_version: 0.1.0
     # used by self-update command
-    gh_download_url: https://gpetrache-at-ca.github.io/iedtools/downloads
+    gh_download_url: http://gpetrache-at-ca.github.io/iedtools/build
