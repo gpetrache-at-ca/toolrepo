@@ -1,0 +1,7 @@
+services:
+    command.ib.pgcmin:
+        class: IlluminateEd\IEdTools\Command\IB\PgcMinCommand
+        tags:
+        - { name: console.command }
+        - { name: console.command.ib }
+

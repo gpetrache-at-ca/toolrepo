@@ -7,11 +7,10 @@ use Symfony\Component\Console\Application as BaseApplication;
 class Application extends BaseApplication
 {
     const NAME      = 'Illuminate Education Tools';
-    const VERSION   = '0.1.0';
 
-    public function __construct()
+    public function __construct($version)
     {
-        parent::__construct(static::NAME, static::VERSION);
+        parent::__construct(static::NAME, $version);
     }
 }
 

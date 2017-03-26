@@ -1,14 +1,10 @@
+imports:
+    - { resource: services/commands.yml }
+
 services:
     iedtools.app:
         class: IlluminateEd\IEdTools\Console\Application
-#        arguments: 
-#            { name: 'Illuminate Education Tools', version: "%app_version%" }
+        arguments: [ "%app_version%" ]
         calls:
-            - [add, ['@ib.command.pgcmin']]
-
-    ib.command.pgcmin:
-        class: IlluminateEd\IEdTools\Command\IB\PgcMinCommand
-        tags:
-        - { name: console.command }
-        - { name: console.ib.command }
-
+            - [add, ['@command.self_update']]
+            - [add, ['@command.ib.pgcmin']]

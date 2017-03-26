@@ -1,0 +1,13 @@
+imports:
+    - { resource: commands/common.yml }
+    - { resource: commands/atd.yml }
+    - { resource: commands/ib.yml }
+
+services:
+    command.self_update:
+        class: IlluminateEd\IEdTools\Command\SelfUpdateCommand
+        calls:
+            - [setGhDownloadUrl, [ "%gh_download_url%" ]]
+        tags:        
+        - { name: console.command }
+
