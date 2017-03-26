@@ -1,0 +1,20 @@
+{
+    "chmod": "0755",
+    "directories": [
+        "src",
+        "config"
+    ],
+    "files": [
+        "autoload.php"
+    ],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": ["Tests"],
+            "in": "vendor"
+        }
+   ],
+   "main": "bin/iedtools",
+   "output": "build/iedtools.phar",
+   "stub": true
+}
