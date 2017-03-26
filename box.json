@@ -1,5 +1,7 @@
 {
+    "algorithm": "OPENSSL",    
     "chmod": "0755",
+    "compression": "GZ",
     "directories": [
         "src",
         "config"
@@ -14,7 +16,10 @@
             "in": "vendor"
         }
    ],
+   "git-version": "package_version",
+   "intercept": true,
    "main": "bin/iedtools",
    "output": "build/iedtools.phar",
-   "stub": true
+   "stub": true,
+   "key": "private.key"
 }

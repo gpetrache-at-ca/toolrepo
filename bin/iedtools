@@ -18,5 +18,8 @@ $container = new ContainerBuilder();
 $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . "/../config"));
 $loader->load('config.yml');
 
+//$cmd = $container->get('command.self_update');
+//var_dump($cmd->getGhDownloadUrl());exit;
+
 $application = $container->get('iedtools.app');
 $application->run($input);

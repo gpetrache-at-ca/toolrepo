@@ -11,7 +11,9 @@ use Humbug\SelfUpdate\Strategy\ShaStrategy;
 use Humbug\SelfUpdate\Strategy\GithubStrategy;
 
 /**
- * Reference: https://github.com/padraic/humbug/blob/master/src/Command/SelfUpdate.php
+ * References: 
+ * https://github.com/padraic/humbug/blob/master/src/Command/SelfUpdate.php
+ * https://mwop.net/blog/2015-12-14-secure-phar-automation.html
  */
 class SelfUpdateCommand extends Command
 {
@@ -42,7 +44,7 @@ class SelfUpdateCommand extends Command
     protected function getStableUpdater()
     {
         $updater = new Updater;
-        $updater->setStrategey(Updater::STRATEGY_GITHUB);
+        $updater->setStrategy(Updater::STRATEGY_GITHUB);
 
         return $this->getGithubReleasesUpdater($updater);
     }
