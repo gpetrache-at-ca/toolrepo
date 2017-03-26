@@ -29,6 +29,9 @@
 cd <checkout directory>
 bin/box build
 ```
+
+From there, you may place it anywhere that will make it easier for you to access (such as /usr/local/bin) and chmod it to 755. You can even rename it to just `iedtools` to avoid having to type the .phar extension every time.
+
 *Notes:* output phar file `iedtools.phar` is located in `build` directory
 
 #### Dev
