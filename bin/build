@@ -1,12 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
+CURRENT_DIR=$(pwd)
+SCRIPT_DIR=$(dirname $BASH_SOURCE)
+CHECKOUT_DIR=$CURRENT_DIR/$SCRIPT_DIR/../
+
 # Update Box
-./bin/box update
+$CHECKOUT_DIR/bin/box update
 
 # Make the build leaner
 composer install --no-dev
 
 # Build Phar
-./bin/box build -vvv
+$CHECKOUT_DIR/bin/box build -c $CHECKOUT_DIR/box.json -vvv
 
 # Create Version
-sha1sum ./build/iedtools.phar > ./build/iedtools.phar.version
+sha1sum $CHECKOUT_DIR/build/iedtools.phar > $CHECKOUT_DIR/build/iedtools.phar.version
