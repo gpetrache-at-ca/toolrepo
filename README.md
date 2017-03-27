@@ -3,6 +3,7 @@
 #### Create New Tool
 
 1) Create command file in `src/IlluminateEd/IEdTools/Command` directory
+    reference: https://symfony.com/doc/2.8/console.html
 1) Add new command to service. Update `config/services.yml`.
     1) Add newly created command to services
     ```
@@ -12,7 +13,7 @@
         command.ib.pgcmin:
             class: IlluminateEd\IEdTools\Command\IB\PgcMinCommand
     ```
-    2) Add `add` method in `iedtools.app` `calls` to automatically add command when instantiated by service container.
+    1) Add `add` method in `iedtools.app` `calls` to automatically add command when instantiated by service container.
     ```
     services:
         iedtools.app:
