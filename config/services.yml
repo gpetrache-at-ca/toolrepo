@@ -2,8 +2,8 @@ imports:
     - { resource: services/commands.yml }
 
 services:
-    iedtools.app:
-        class: IlluminateEd\IEdTools\Console\Application
+    app.console.toolrepo:
+        class: SpacedGAP\ToolRepo\Console\Application
         arguments: [ "%app_version%" ]
         calls:
             - [add, ['@command.self_update']]

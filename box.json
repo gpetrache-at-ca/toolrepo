@@ -18,8 +18,8 @@
    ],
    "git-version": "package_version",
    "intercept": true,
-   "main": "bin/iedtools",
-   "output": "build/iedtools.phar",
+   "main": "bin/toolrepo",
+   "output": "build/toolrepo.phar",
    "stub": true,
    "key": "private.key"
 }

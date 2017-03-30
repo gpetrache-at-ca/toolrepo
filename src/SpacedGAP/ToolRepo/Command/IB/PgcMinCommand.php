@@ -1,6 +1,6 @@
 <?php
 
-namespace IlluminateEd\IEdTools\Command\IB;
+namespace SpacedGAP\ToolRepo\Command\IB;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

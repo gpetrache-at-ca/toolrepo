@@ -5,7 +5,7 @@ imports:
 
 services:
     command.self_update:
-        class: IlluminateEd\IEdTools\Command\SelfUpdateCommand
+        class: SpacedGAP\ToolRepo\Command\SelfUpdateCommand
         calls:
             - [setGhDownloadUrl, [ "%gh_download_url%" ]]
         tags:        

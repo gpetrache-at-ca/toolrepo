@@ -1,6 +1,6 @@
 <?php
 
-namespace IlluminateEd\IEdTools\Command;
+namespace SpacedGap\ToolRepo\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -17,16 +17,16 @@ use Humbug\SelfUpdate\Strategy\GithubStrategy;
  */
 class SelfUpdateCommand extends Command
 {
-    const PACKAGE_NAME = 'illuminateeducation/iedtools';
-    const VERSION_FILE = 'iedtools.version';
-    const FILE_NAME = 'iedtools.phar';
+    const PACKAGE_NAME = 'spacedgap/toolrepo';
+    const VERSION_FILE = 'toolrepo.version';
+    const FILE_NAME = 'toolrepo.phar';
     
     protected $gh_download_url;
 
     protected function configure()
     {
         $this->setName('self-update')
-            ->setDescription('Updates iedtools.phar to latest version');
+            ->setDescription('Updates toolrepo.phar to latest version');
     }
    
     protected function execute (InputInterface $input, OutputInterface $output)
@@ -67,9 +67,9 @@ class SelfUpdateCommand extends Command
             $old_version = $updater->getOldVersion();
 
             if ($result) {
-                print_r("Updated to Version {$new_version}");               
+                echo "Updated to Version {$new_version}\n";
             } else {
-                print_r("Still in Version {$old_version}");
+                echo "Still in Version {$old_version}\n";
             }
         } catch (\Exception $e) {
             print_r($e->getMessage());
