@@ -13,4 +13,4 @@ composer install --no-dev
 $CHECKOUT_DIR/bin/box build -c $CHECKOUT_DIR/box.json -vvv
 
 # Create Version
-sha1sum $CHECKOUT_DIR/build/iedtools.phar > $CHECKOUT_DIR/build/iedtools.phar.version
+sha1sum $CHECKOUT_DIR/build/toolrepo.phar > $CHECKOUT_DIR/build/toolrepo.phar.version

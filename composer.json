@@ -1,6 +1,6 @@
 {
-    "name": "illuminateeducation/iedtools",
-    "description": "Illuminate Education Tools",
+    "name": "spacedgap/toolrepo",
+    "description": "Tool Repository",
     "authors": [
         {
             "name": "Giovanni Petrache",
@@ -19,5 +19,10 @@
         "psr-4": { 
             "SpacedGAP\\ToolRepo\\": "src/SpacedGAP/ToolRepo/"
         }
-    }
+    },
+    "bin": [
+        "bin/toolrepo",
+        "bin/build",
+        "bin/box"
+    ]
 }

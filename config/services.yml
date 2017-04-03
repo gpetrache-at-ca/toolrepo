@@ -8,3 +8,7 @@ services:
         calls:
             - [add, ['@command.self_update']]
             - [add, ['@command.ib.pgcmin']]
+    app.console.toolrepo.input:
+        class: \Symfony\Component\Console\Input\ArgvInput
+    app.console.toolrepo.output:
+        class: \Symfony\Component\Console\Output\ConsoleOutput
